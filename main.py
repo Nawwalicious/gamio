@@ -74,22 +74,25 @@ def set_limit(low):
 
 
 def get_valid_number(prompt):
+    """Getting a Valid Number in Range"""
     is_valid = False
     while is_valid == False:
         try:
             number = int(input(prompt))
             is_valid = True
         except ValueError:
-            print("Invalid number")
+            print("Invalid number entered")
     return number
 
 
 def good_score(number_of_guesses, range_):
+    """Determine whether the number of guesses is a good score."""
     if number_of_guesses <= math.ceil(math.log2(range_)):
         return True
 
 
 def high_scores():
+    """Load and Display High Scores"""
     scores = []
     with open("scores.txt") as in_file:
         for line in in_file:
