@@ -98,3 +98,4 @@ def high_scores():
         print(f"{score[0]} ({score[1]}) {marker}")
 
 main()
+#Test
